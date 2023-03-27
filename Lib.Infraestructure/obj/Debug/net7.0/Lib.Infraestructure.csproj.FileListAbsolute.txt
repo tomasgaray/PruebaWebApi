@@ -1,0 +1,17 @@
+C:\Users\Tomas Garay\Desktop\prueba\PruebaWebApi\Lib.Infraestructure\bin\Debug\net7.0\Lib.Infraestructure.deps.json
+C:\Users\Tomas Garay\Desktop\prueba\PruebaWebApi\Lib.Infraestructure\bin\Debug\net7.0\Lib.Infraestructure.runtimeconfig.json
+C:\Users\Tomas Garay\Desktop\prueba\PruebaWebApi\Lib.Infraestructure\bin\Debug\net7.0\Lib.Infraestructure.dll
+C:\Users\Tomas Garay\Desktop\prueba\PruebaWebApi\Lib.Infraestructure\bin\Debug\net7.0\Lib.Infraestructure.pdb
+C:\Users\Tomas Garay\Desktop\prueba\PruebaWebApi\Lib.Infraestructure\bin\Debug\net7.0\Lib.Domain.dll
+C:\Users\Tomas Garay\Desktop\prueba\PruebaWebApi\Lib.Infraestructure\bin\Debug\net7.0\Lib.Domain.pdb
+C:\Users\Tomas Garay\Desktop\prueba\PruebaWebApi\Lib.Infraestructure\obj\Debug\net7.0\Lib.Infraestructure.csproj.AssemblyReference.cache
+C:\Users\Tomas Garay\Desktop\prueba\PruebaWebApi\Lib.Infraestructure\obj\Debug\net7.0\Lib.Infraestructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tomas Garay\Desktop\prueba\PruebaWebApi\Lib.Infraestructure\obj\Debug\net7.0\Lib.Infraestructure.AssemblyInfoInputs.cache
+C:\Users\Tomas Garay\Desktop\prueba\PruebaWebApi\Lib.Infraestructure\obj\Debug\net7.0\Lib.Infraestructure.AssemblyInfo.cs
+C:\Users\Tomas Garay\Desktop\prueba\PruebaWebApi\Lib.Infraestructure\obj\Debug\net7.0\Lib.Infraestructure.csproj.CoreCompileInputs.cache
+C:\Users\Tomas Garay\Desktop\prueba\PruebaWebApi\Lib.Infraestructure\obj\Debug\net7.0\Lib.Infraestructure.csproj.CopyComplete
+C:\Users\Tomas Garay\Desktop\prueba\PruebaWebApi\Lib.Infraestructure\obj\Debug\net7.0\Lib.Infraestructure.dll
+C:\Users\Tomas Garay\Desktop\prueba\PruebaWebApi\Lib.Infraestructure\obj\Debug\net7.0\refint\Lib.Infraestructure.dll
+C:\Users\Tomas Garay\Desktop\prueba\PruebaWebApi\Lib.Infraestructure\obj\Debug\net7.0\Lib.Infraestructure.pdb
+C:\Users\Tomas Garay\Desktop\prueba\PruebaWebApi\Lib.Infraestructure\obj\Debug\net7.0\Lib.Infraestructure.genruntimeconfig.cache
+C:\Users\Tomas Garay\Desktop\prueba\PruebaWebApi\Lib.Infraestructure\obj\Debug\net7.0\ref\Lib.Infraestructure.dll

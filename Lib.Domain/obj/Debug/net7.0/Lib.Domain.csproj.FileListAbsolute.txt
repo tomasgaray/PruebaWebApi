@@ -1,0 +1,12 @@
+C:\Users\Tomas Garay\Desktop\prueba\PruebaWebApi\Lib.Domain\bin\Debug\net7.0\Lib.Domain.deps.json
+C:\Users\Tomas Garay\Desktop\prueba\PruebaWebApi\Lib.Domain\bin\Debug\net7.0\Lib.Domain.dll
+C:\Users\Tomas Garay\Desktop\prueba\PruebaWebApi\Lib.Domain\bin\Debug\net7.0\Lib.Domain.pdb
+C:\Users\Tomas Garay\Desktop\prueba\PruebaWebApi\Lib.Domain\obj\Debug\net7.0\Lib.Domain.csproj.AssemblyReference.cache
+C:\Users\Tomas Garay\Desktop\prueba\PruebaWebApi\Lib.Domain\obj\Debug\net7.0\Lib.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tomas Garay\Desktop\prueba\PruebaWebApi\Lib.Domain\obj\Debug\net7.0\Lib.Domain.AssemblyInfoInputs.cache
+C:\Users\Tomas Garay\Desktop\prueba\PruebaWebApi\Lib.Domain\obj\Debug\net7.0\Lib.Domain.AssemblyInfo.cs
+C:\Users\Tomas Garay\Desktop\prueba\PruebaWebApi\Lib.Domain\obj\Debug\net7.0\Lib.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Tomas Garay\Desktop\prueba\PruebaWebApi\Lib.Domain\obj\Debug\net7.0\Lib.Domain.dll
+C:\Users\Tomas Garay\Desktop\prueba\PruebaWebApi\Lib.Domain\obj\Debug\net7.0\refint\Lib.Domain.dll
+C:\Users\Tomas Garay\Desktop\prueba\PruebaWebApi\Lib.Domain\obj\Debug\net7.0\Lib.Domain.pdb
+C:\Users\Tomas Garay\Desktop\prueba\PruebaWebApi\Lib.Domain\obj\Debug\net7.0\ref\Lib.Domain.dll
