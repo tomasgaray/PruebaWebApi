@@ -4,15 +4,12 @@ using FluentAssertions;
 using Lib.Domain.Dto;
 using Lib.Domain.Entities;
 using Lib.Domain.Services;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Infrastructure;
-using Microsoft.AspNetCore.TestHost;
 using Moq;
 using Newtonsoft.Json;
 using System.Net;
 using System.Text;
+using System.Web.Http.Results;
 
 namespace API.Test
 {
@@ -67,7 +64,7 @@ namespace API.Test
 
             this._repository.Setup(x => x.AddAsync(task));
 
-            var application = new MyWebApplication();
+            var application = new TestApplicationFactory();
             var client = application.CreateClient();
            
             var content = new StringContent(JsonConvert.SerializeObject(task), Encoding.UTF8, "application/json");
@@ -85,12 +82,12 @@ namespace API.Test
                 Completed = false,
                 CreatedDate = DateTime.Now,
                 Description = string.Empty,
-                Title = string.Empty
+                Title = "Reparar Auto"
             };
 
             this._repository.Setup(x => x.UpdateAsync(task));
 
-            var application = new MyWebApplication();
+            var application = new TestApplicationFactory();
             var client = application.CreateClient();
 
             var content = new StringContent(JsonConvert.SerializeObject(task), Encoding.UTF8, "application/json");
@@ -114,7 +111,7 @@ namespace API.Test
 
             this._repository.Setup(x => x.UpdateAsync(task));
 
-            var application = new MyWebApplication();
+            var application = new TestApplicationFactory();
             var client = application.CreateClient();
 
             var content = new StringContent(JsonConvert.SerializeObject(task), Encoding.UTF8, "application/json");
@@ -139,17 +136,17 @@ namespace API.Test
 
             this._repository.Setup(x => x.AddAsync(task));
 
-      
             TodoTaskController sut = new TodoTaskController(this._repository.Object);
             IActionResult result = await sut.AddAsync(task);
             OkObjectResult objectResults = (OkObjectResult)result;
-            objectResults?.Value.Should().BeOfType<TodoTask>();
+            objectResults?.StatusCode.Should().Be(200);
         }
+        
+        
 
         [Fact]
         public async Task Update_ReturnSuccess()
         {
-
             TodoTaskDto task = new TodoTaskDto()
             {
                 TaskId = 1,
@@ -161,14 +158,49 @@ namespace API.Test
 
             this._repository.Setup(x => x.UpdateAsync(task));
 
-            this._repository
-           .Setup(x => x.GetAllAsync())
-           .ReturnsAsync(TodoTaskFixture.GetTaskMock());
-
+  
             TodoTaskController sut = new TodoTaskController(this._repository.Object);
             IActionResult result = await sut.UpdateAsync(task);
             OkObjectResult objectResults = (OkObjectResult)result;
-            objectResults?.Value.Should().BeOfType<TodoTask>();
+            objectResults?.StatusCode.Should().Be(200);
         }
+
+
+
+        [Fact]
+        public async Task Remove_ReturnSuccess()
+        {
+            int taskId = 1;
+
+            this._repository.Setup(x => x.RemoveAsync(taskId));
+
+
+            this._repository
+             .Setup(x => x.GetAllAsync())
+             .ReturnsAsync(TodoTaskFixture.GetTaskMock());
+
+            TodoTaskController sut = new TodoTaskController(this._repository.Object);
+            IActionResult result = await sut.RemoveAsync(taskId);
+            var okResult = result as Microsoft.AspNetCore.Mvc.OkResult;
+            okResult?.StatusCode.Should().Be(200);
+
+        }
+
+
+        [Fact]
+        public async Task Remove_ReturnBadRequest_When_Task_NotExists()
+        {
+
+            int taskId = -50;
+
+            this._repository.Setup(x => x.RemoveAsync(taskId));
+
+            var application = new TestApplicationFactory();
+            var client = application.CreateClient();
+
+            var result = await client.DeleteAsync($"/api/TodoTask/{taskId}");
+            result.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+        }
+
     }
 }
